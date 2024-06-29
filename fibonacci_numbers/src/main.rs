@@ -1,5 +1,13 @@
+use std::io::stdin;
+
 fn main() {
-    gen_fibonacci_table(30);
+    println!("Type a number(max. 255): ");
+    let mut input = String::new();
+    stdin().read_line(&mut input).expect("");
+
+    let num = input.trim().parse().expect("Type a number!");
+    println!();
+    gen_fibonacci_table(num);
 }
 
 fn gen_fibonacci_table(length: u8) {
