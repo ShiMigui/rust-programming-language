@@ -31,7 +31,7 @@ fn main() {
         while i >= 0 {
             let mut phrase = phrases[i as usize].to_string();
 
-            if i == 0 && index != 0{
+            if i == 0 && index != 0 {
                 phrase = format!("And {}", phrase.to_lowercase());
             }
 
